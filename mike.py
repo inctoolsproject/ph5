@@ -1828,7 +1828,15 @@ def bot(op):
                     wait["clock"] = False
                     kc.sendText(msg.to,"Jam Sedang Off")
          #-------------Fungsi Jam on/off Finish-------------------#           
-         
+	    elif "Say " in msg.text:
+                string = msg.text.replace("Say ","")
+                if len(string.decode('utf-8')) <= 50:
+                    ki.sendText(msg.to," " + string + " ")
+                    kk.sendText(msg.to," " + string + " ")
+                    ks.sendText(msg.to," " + string + " ")
+                    kc.sendText(msg.to," " + string + " ")
+                    ka.sendText(msg.to," " + string + " ")
+		 
          #-------------Fungsi Change Clock Start------------------#
             elif msg.text in ["Change clock"]:
                 n = msg.text.replace("Change clock","")
@@ -1852,7 +1860,7 @@ def bot(op):
                     kc.sendText(msg.to,"Aktifkan jam terlebih dulu")
          #-------------Fungsi Jam Update Finish-------------------#
 
-            elif msg.text == "cek":
+            elif msg.text == "cek","Cek":
                     cl.sendText(msg.to, "Set point.")
                     try:
                         del wait2['readPoint'][msg.to]
@@ -1865,7 +1873,7 @@ def bot(op):
                     wait2['setTime'][msg.to] = datetime.now().strftime('%Y-%m-%d %H:%M')
                     wait2['ROM'][msg.to] = {}
                     print wait2
-            elif msg.text == "sider":
+            elif msg.text == "sider","Sider":
                     if msg.to in wait2['readPoint']:
                         if wait2["ROM"][msg.to].items() == []:
                             chiya = ""
@@ -1902,7 +1910,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         cl.updateGroup(G)
 
-            elif msg.text in ["_First join"]:
+            elif msg.text in ["Mike first"]:
               if msg.form_ in admin:
                   x = ki.getGroup(msg.to)
                   x.preventJoinByTicket = False
@@ -1915,7 +1923,7 @@ def bot(op):
                   ki.updateGroup(G)
                   Ticket = ki.reissueGroupTicket(msg.to)
 
-            elif msg.text in ["_Second join"]:
+            elif msg.text in ["Mike second"]:
               if msg.from_ in admin:
                   x = cl.getGroup(msg.to)
                   x.preventJoinByTicket = False
@@ -1928,7 +1936,7 @@ def bot(op):
                   cl.updateGroup(G)
                   Ticket = cl.reissueGroupTicket(msg.to)
 
-            elif msg.text in ["_Third join"]:
+            elif msg.text in ["Mike third"]:
               if msg.from_ in admin:
                   x = cl.getGroup(msg.to)
                   x.preventJoinByTicket = False
@@ -1941,7 +1949,7 @@ def bot(op):
                   cl.updateGroup(G)
                   Ticket = cl.reissueGroupTicket(msg.to)
                   
-            elif msg.text in ["_Fourth join"]:
+            elif msg.text in ["Mike fourth"]:
               if msg.from_ in admin:
                   X = cl.getGroup(msg.to)
                   X.preventJoinByTicket = False
@@ -2125,25 +2133,7 @@ def bot(op):
 								except:
 									ki.sendText(msg.to,"Dasar Laknat!")
         #----------------Fungsi Kick User Target Finish----------------------#      
-            elif "Blacklist @" in msg.text:
-                _name = msg.text.replace("Blacklist @","")
-                _kicktarget = _name.rstrip(' ')
-                gs = ki2.getGroup(msg.to)
-                targets = []
-                for g in gs.members:
-                    if _kicktarget == g.displayName:
-                        targets.append(g.mid)
-                        if targets == []:
-                            cl.sendText(msg.to,"Not found")
-                        else:
-                            for target in targets:
-                                try:
-                                    wait["blacklist"][target] = True
-                                    f=codecs.open('st2__b.json','w','utf-8')
-                                    json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                                    k3.sendText(msg.to,"Target locked.")
-                                except:
-                                    ki.sendText(msg.to,"error")
+           
             
             #----------------Fungsi Banned User Target Start-----------------------#
             elif "Ban @" in msg.text:
