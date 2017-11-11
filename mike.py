@@ -73,6 +73,7 @@ helpMessage =""" Mike BOT
 [_namabot join] = Invite bot
 [Bye _namabot] = Leave bot
 [Rest Mikey] = Leave all bot
+[Sweep Mike] = Kick all member
 """
 
 Setgroup =""" Private Menu 􀔃􀄆red check mark􏿿
@@ -1877,8 +1878,7 @@ def bot(op):
                         cl.sendText(msg.to, "T E R C Y D U K %s\n\nT E R S A N G K A\n%s\nDate and time:\n[%s]"  % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
                         cl.sendText(msg.to, "Type 'cek' to set point.")
-#-----------------------------------------------
-
+#-------------------------------------#
 #-----------------------------------------------
          #----------------Fungsi Join Group Start-----------------------#
             elif msg.text in ["Mikey"]:
@@ -2047,7 +2047,7 @@ def bot(op):
             elif msg.text in ["Ruqyah"]:
               if msg.from_ in admin:
                 if msg.toType == 2:
-                    group = ki.getGroup(msg.to)
+                    group = ki.getGroup(msg.to)		  
                     gMembMids = [contact.mid for contact in group.members]
                     matched_list = []
                     for tag in wait["blacklist"]:
@@ -2267,7 +2267,11 @@ def bot(op):
                 kk.sendText(msg.to,"Shikamaru")
                 kc.sendText(msg.to,"Kororo")
       #-------------Fungsi Respon Finish---------------------#
-
+            elif msg.text in [BACPT]:
+	        cl.sendText(msg.to,"DIAM LU!")
+                ki.sendText(msg.to,"Sok lu!")
+		kk.sendText(msg.to,"Mau diruqyah?")
+		kc.sendText(msg.to,"sudah sudah")
       #-------------Fungsi Balesan Respon Start---------------------#
             elif msg.text in ["Ini Apa","ini apa","Apaan Ini","apaan ini"]:
                 ki.sendText(msg.to,"Ya gitu deh intinya mah 􀨁􀅴questioning􏿿")
@@ -2549,7 +2553,7 @@ def autolike():
         if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
           try:    
 			cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1003)
-			cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by\nline.me/ti/p/~michaelfs05")
+			cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by\nline.me/ti/p/~mikefs05")
 			ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1003)
 			kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1003)
 			kc.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1003)
