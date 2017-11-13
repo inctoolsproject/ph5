@@ -1860,7 +1860,7 @@ def bot(op):
                     kc.sendText(msg.to,"Aktifkan jam terlebih dulu")
          #-------------Fungsi Jam Update Finish-------------------#
 
-            elif msg.text == "cek","Cek":
+            elif msg.text == "Cek":
                     cl.sendText(msg.to, "Set point.")
                     try:
                         del wait2['readPoint'][msg.to]
@@ -1873,7 +1873,7 @@ def bot(op):
                     wait2['setTime'][msg.to] = datetime.now().strftime('%Y-%m-%d %H:%M')
                     wait2['ROM'][msg.to] = {}
                     print wait2
-            elif msg.text == "sider","Sider":
+            elif msg.text == "Sider":
                     if msg.to in wait2['readPoint']:
                         if wait2["ROM"][msg.to].items() == []:
                             chiya = ""
@@ -2257,11 +2257,7 @@ def bot(op):
                 kk.sendText(msg.to,"Shikamaru")
                 kc.sendText(msg.to,"Kororo")
       #-------------Fungsi Respon Finish---------------------#
-            elif msg.text in [BACPT]:
-	        cl.sendText(msg.to,"DIAM LU!")
-                ki.sendText(msg.to,"Sok lu!")
-		kk.sendText(msg.to,"Mau diruqyah?")
-		kc.sendText(msg.to,"sudah sudah")
+         
       #-------------Fungsi Balesan Respon Start---------------------#
             elif msg.text in ["Ini Apa","ini apa","Apaan Ini","apaan ini"]:
                 ki.sendText(msg.to,"Ya gitu deh intinya mah 􀨁􀅴questioning􏿿")
