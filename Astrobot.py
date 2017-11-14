@@ -3986,7 +3986,7 @@ def bot(op):
 						cl.sendText(manusia,(bctxt))
 										 
 #========================================
-            elif msg.text in ["Astrobot","Myastro]:
+            elif msg.text in ["Astrobot","Myastro"]:
 					G = cl.getGroup(msg.to)
 					info = cl.getGroup(msg.to)
 					G.preventJoinByTicket = False
@@ -4199,7 +4199,7 @@ def bot(op):
                if msg.from_ in admin:              
                  if msg.toType == 2:                
                    X = cl.getGroup(msg.to)
-                try:
+                 try:
                      ki.leaveGroup(msg.to)
                      kk.leaveGroup(msg.to)
                      kc.leaveGroup(msg.to)
