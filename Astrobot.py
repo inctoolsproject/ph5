@@ -4218,7 +4218,7 @@ def bot(op):
                      kr.leaveGroup(msg.to)
                      ks.leaveGroup(msg.to)
                      kt.leaveGroup(msg.to)
-                except:
+                 except:
                      pass
             elif msg.text in ["Astro1 @bye","Astro1 pulang","Astro1 bye"]:
                 if msg.toType == 2:
