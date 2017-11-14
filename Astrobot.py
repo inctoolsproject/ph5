@@ -3,8 +3,8 @@
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
-from bs4 import BeautifulSoup
-import time, random, sys, re, os, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, urllib2, wikipedia
+import time,random,sys,json,codecs,threading,glob,re
+import requests, urllib, json
 
 cl = LINETCR.LINE()
 cl.login(qr=True)
