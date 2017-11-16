@@ -1962,9 +1962,94 @@ def bot(op):
                   cl.updateGroup(G)
                   Ticket = cl.reissueGroupTicket(msg.to)
     #----------------------Fungsi Join Group Finish---------------#
+#----------------------------------------------------------------------------------#
+            elif "Apakah " in msg.text:
+                tanya = msg.text.replace("Apakah ","")
+                jawab = ("Ya","Tidak","Mungkin","Bisa jadi"," Capek aku pantek!")
+                jawaban = random.choice(jawab)
+                cl.sendText(msg.to,jawaban)
+#------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------------#
+            elif msg.text in ["Mimic on","mimic on"]:
+                    if wait3["copy"] == True:
+                        if wait["lang"] == "JP":
+                            cl.sendText(msg.to,"Already on")
+                        else:
+                            cl.sendText(msg.to,"Mimic On")
+                    else:
+                    	wait3["copy"] = True
+                    	if wait["lang"] == "JP":
+                    		cl.sendText(msg.to,"Mimic On")
+                        else:
+    	                	cl.sendText(msg.to,"Already on")
+            elif msg.text in ["Mimic off","mimic:off"]:
+                    if wait3["copy"] == False:
+                        if wait["lang"] == "JP":
+                            cl.sendText(msg.to,"Already on")
+                        else:
+                            cl.sendText(msg.to,"Mimic Off")
+                    else:
+                    	wait3["copy"] = False
+                    	if wait["lang"] == "JP":
+                    		cl.sendText(msg.to,"Mimic Off")
+                        else:
+	                    	cl.sendText(msg.to,"Already on")
+            elif msg.text in ["Target list"]:
+                        if wait3["target"] == {}:
+                            cl.sendText(msg.to,"nothing")
+                        else:
+                            mc = "Target mimic user\n"
+                            for mi_d in wait3["target"]:
+                                mc += "✔️ "+cl.getContact(mi_d).displayName + "\n"
+                            cl.sendText(msg.to,mc)
+
+            elif "Mimic target " in msg.text:
+                        if wait3["copy"] == True:
+                            siapa = msg.text.replace("Mimic target ","")
+                            if siapa.rstrip(' ') == "me":
+                                wait3["copy2"] = "me"
+                                cl.sendText(msg.to,"Mimic change to me")
+                            elif siapa.rstrip(' ') == "target":
+                                wait3["copy2"] = "target"
+                                cl.sendText(msg.to,"Mimic change to target")
+                            else:
+                                cl.sendText(msg.to,"I dont know")
+            elif "Target @" in msg.text:
+                        target = msg.text.replace("Target @","")
+                        gc = cl.getGroup(msg.to)
+                        targets = []
+                        for member in gc.members:
+                            if member.displayName == target.rstrip(' '):
+                                targets.append(member.mid)
+                        if targets == []:
+                            cl.sendText(msg.to, "User not found")
+                        else:
+                            for t in targets:
+                                wait3["target"][t] = True
+                            cl.sendText(msg.to,"Target added")
+            elif "Del target @" in msg.text:
+                        target = msg.text.replace("Del target @","")
+                        gc = cl.getGroup(msg.to)
+                        targets = []
+                        for member in gc.members:
+                            if member.displayName == target.rstrip(' '):
+                                targets.append(member.mid)
+                        if targets == []:
+                            cl.sendText(msg.to, "User not found")
+                        else:
+                            for t in targets:
+                                del wait3["target"][t]
+                        cl.sendText(msg.to,"Target deleted")
+
+#--------------------------------------------------------------------------#
+
 #------------------------------------------------------------------#
             elif "All:" in msg.text:
                 string = msg.text.replace("All:","")
+		if len(string.decode('utf-8')) <= 20:
+		    profile = cl.getProfile()
+		    profile.displayName = string
+		    cl.updateProfile(profile)
                 if len(string.decode('utf-8')) <= 20:
                     profile = ki.getProfile()
                     profile.displayName = string
