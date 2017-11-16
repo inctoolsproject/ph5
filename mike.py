@@ -2236,8 +2236,27 @@ def bot(op):
 								except:
 									ki.sendText(msg.to,"Dasar Laknat!")
         #----------------Fungsi Kick User Target Finish----------------------#      
-           
-            
+            elif "Copy @" in msg.text:
+                if msg.toType == 2:
+                    if msg.from_ in admin:
+                        print "[COPY] Ok"
+                        _name = msg.text.replace("Copy @","")
+                        _nametarget = _name.rstrip('  ')
+                        gs = cl.getGroup(msg.to)
+                        targets = []
+                        for g in gs.members:
+                            if _nametarget == g.displayName:
+                                targets.append(g.mid)
+                        if targets == []:
+                            cl.sendText(msg.to, "Tidak Ada Target Copy")
+                        else:
+                            for target in targets:
+                                try:
+                                    ki.cloneContactProfile(target)
+                                    kk.cloneContactProfile(target)
+                                    kc.cloneContactProfile(target)
+                                except:
+				       cl.sendText(msg.to," Sudah Astro")
             #----------------Fungsi Banned User Target Start-----------------------#
             elif "Ban @" in msg.text:
               if msg.from_ in admin:
