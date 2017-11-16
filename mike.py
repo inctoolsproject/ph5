@@ -2043,8 +2043,10 @@ def bot(op):
 
 #--------------------------------------------------------------------------#				
 #---------------------------------------------------------------------------------------#
-              elif "All:" in msg.text:
-                  string = msg.text.replace("All:","")
+             elif "All:" in msg.text:
+                  if msg.from_ in admin:
+		    if msg.toType == 2:		
+		     string = msg.text.replace("All:","")
 		  if len(string.decode('utf-8')) <= 20:
 		      profile = cl.getProfile()
 		      profile.displayName = string
