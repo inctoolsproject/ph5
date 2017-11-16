@@ -2042,11 +2042,11 @@ def bot(op):
                         cl.sendText(msg.to,"Target deleted")
 
        #--------------------------------------------------------------------------#				
-       #----------------------------------------------------
+       #=============================================
             elif "All:" in msg.text:
               if msg.from_ in admin:
 	        if msg.toType == 2:		
-		   string = msg.text.replace("All:","")
+		  string = msg.text.replace("All:","")
 		  if len(string.decode('utf-8')) <= 20:
 		      profile = cl.getProfile()
 		      profile.displayName = string
