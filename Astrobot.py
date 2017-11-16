@@ -3472,7 +3472,7 @@ def bot(op):
                     else:
                         uye.sendText(msg.to,"Not for use less than group")
 #===========================================
-            elif msg.text.lower() == 'Responsename':
+            elif msg.text.lower() == 'ASTRO SAYANG':
                 profile = ki.getProfile()
                 text = profile.displayName + "Astrobot"
                 ki.sendText(msg.to, text)
@@ -3869,7 +3869,7 @@ def bot(op):
                             for rom in wait2["ROM"][msg.to].items():
                                 print rom
                                 chiya += rom[1] + "\n"
-                        cl.sendText(msg.to, "╔═══════════════%s\n╠════════════════\n%s╠═══════════════\n║Readig point creation:\n║ [%s]\n╚════════════════"  % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                        cl.sendText(msg.to, "<============%s\n================\n%s==============\n║Readig point creation:\n║ [%s]\n============="  % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
                         cl.sendText(msg.to, "Ketik kau dulu Cek baru Sider")
 						
@@ -3942,6 +3942,12 @@ def bot(op):
                 jawab = ("Ya","Tidak","Mungkin","Bisa jadi"," Capek aku pantek!")
                 jawaban = random.choice(jawab)
                 cl.sendText(msg.to,jawaban)
+		
+	    elif "Mungkinkah" in msg.text:
+		tanya = msg.text.replace("Mungkinkah","")
+                jawab =("Ya","Bisa jadi","Mungkin saja","Tidak","Tidak tahu","Capek aku pantek!")
+		jawaban = random.choice(jawab)
+		cl.sendText(msg.to,jawaban)
 #================================================
 #===============================================
 #=================================================
@@ -4172,25 +4178,8 @@ def bot(op):
 				gid = kp.getGroupIdsJoined()
 				gid = kq.getGroupIdsJoined()
 				gid = kr.getGroupIdsJoined()
-				gid = ks.getGroupIdsJoined()
+				gid = ks.getGroupIdsJoined()				
 				gid = kt.getGroupIdsJoined()
-				for i in gid:
-					ki.leaveGroup(i)
-					kk.leaveGroup(i)
-					kc.leaveGroup(i)
-					kd.leaveGroup(i)
-					ke.leaveGroup(i)
-					kf.leaveGroup(i)
-					kg.leaveGroup(i)
-					kh.leaveGroup(i)
-					kj.leaveGroup(i)
-					kn.leaveGroup(i)
-					ko.leaveGroup(i)
-					kp.leaveGroup(i)
-					kq.leaveGroup(i)
-					kr.leaveGroup(i)
-					ks.leaveGroup(i)
-					kt.leaveGroup(i)
 				if wait["lang"] == "JP":
 					ki.sendText(msg.to,"KITA ASTRO PAMIT DULU")
 				else:
