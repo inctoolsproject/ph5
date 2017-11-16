@@ -2069,25 +2069,25 @@ def bot(op):
 
 
 #---------------------------------------------------------------------------------------#
-            elif "All:" in msg.text:
-                string = msg.text.replace("All:","")
-		if len(string.decode('utf-8')) <= 20:
-		    profile = cl.getProfile()
-		    profile.displayName = string
-		    cl.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 20:
-                    profile = ki.getProfile()
-                    profile.displayName = string
-                    ki.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 20:
-                    profile = kk.getProfile()
-                    profile.displayName = string
-                    kk.updateProfile(profile)
-                if len(string.decode('utf-8')) <= 20:
-                    profile = kc.getProfile()
-                    profile.displayName = string
-                    kc.updateProfile(profile)
-		    cl.sendText(msg.to,"nama berubah menjadi " + string + "")
+            #elif "All:" in msg.text:
+                #string = msg.text.replace("All:","")
+		#if len(string.decode('utf-8')) <= 20:
+		    #profile = cl.getProfile()
+		    #profile.displayName = string
+		    #cl.updateProfile(profile)
+                #if len(string.decode('utf-8')) <= 20:
+                    #profile = ki.getProfile()
+                    #profile.displayName = string
+                    #ki.updateProfile(profile)
+                #if len(string.decode('utf-8')) <= 20:
+                    #profile = kk.getProfile()
+                    #profile.displayName = string
+                    #kk.updateProfile(profile)
+                #if len(string.decode('utf-8')) <= 20:
+                    #profile = kc.getProfile()
+                    #profile.displayName = string
+                    #kc.updateProfile(profile)
+		    #cl.sendText(msg.to,"nama berubah menjadi " + string + "")
 			
 #----------------------------------------------------------------------------------------------#			
     #-------------Fungsi Leave Group Start-----------------------------------------------------#
