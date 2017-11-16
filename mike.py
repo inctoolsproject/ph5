@@ -2065,6 +2065,8 @@ def bot(op):
                                      kc.cloneContactProfile(target)
 				     cl.cloneContactProfile(target)
 				     cl.sendText(msg.to,"Sudah tercopy")
+				 except Exception as e:
+                                     print e
 #---------------------------------------------------------------------------------------------#				
 
 
