@@ -1962,7 +1962,22 @@ def bot(op):
                   cl.updateGroup(G)
                   Ticket = cl.reissueGroupTicket(msg.to)
     #----------------------Fungsi Join Group Finish---------------#
-
+#------------------------------------------------------------------#
+            elif "All:" in msg.text:
+                string = msg.text.replace("All:","")
+                if len(string.decode('utf-8')) <= 20:
+                    profile = ki.getProfile()
+                    profile.displayName = string
+                    ki.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 20:
+                    profile = kk.getProfile()
+                    profile.displayName = string
+                    kk.updateProfile(profile)
+                if len(string.decode('utf-8')) <= 20:
+                    profile = kc.getProfile()
+                    profile.displayName = string
+                    kc.updateProfile(profile)
+		    cl.sendText(msg.to,"nama berubah menjadi " + string + "")
     #-------------Fungsi Leave Group Start---------------#
             elif msg.text in ["Rest Mikey"]:
               if msg.from_ in admin:
@@ -2265,13 +2280,13 @@ def bot(op):
       #-------------Fungsi Balesan Respon Finish---------------------#
 
        #-------------Fungsi Speedbot Start---------------------#
-             elif msg.text in ["zzz","Bot Astro"]:
-                cl.sendText(msg.to, "Sebentar Astro...")
-                start = time.time()
-                time.sleep(0.00009)
-                elapsed_time = time.time() - start
-                cl.sendText(msg.to, "%sseconds" % (elapsed_time))    
-                print "[Command]Speed palsu executed"
+             #elif msg.text in ["zzz","Bot Astro"]:
+                #cl.sendText(msg.to, "Sebentar Astro...")
+                #start = time.time()
+                #time.sleep(0.00009)
+                #elapsed_time = time.time() - start
+                #cl.sendText(msg.to, "%sseconds" % (elapsed_time))    
+                #print "[Command]Speed palsu executed"
             elif "Speed Astro" in msg.text:
                 cl.sendText(msg.to, "Sebentar Astro...")
                 start = time.time()
