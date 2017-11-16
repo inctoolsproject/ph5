@@ -2045,7 +2045,7 @@ def bot(op):
 
 #----------------------------------------------------------------------------------#
              elif "Copy @" in msg.text:
-                 if msg.toType == 2:
+                   if msg.toType == 2:
                      if msg.from_ in admin:
                          print "[COPY] Ok"
                          _name = msg.text.replace("Copy @","")
