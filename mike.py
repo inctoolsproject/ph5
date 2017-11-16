@@ -2044,50 +2044,50 @@ def bot(op):
 #--------------------------------------------------------------------------#
 
 #----------------------------------------------------------------------------------#
-           elif "Copy @" in msg.text:
-               if msg.toType == 2:
-                   if msg.from_ in admin:
-                       print "[COPY] Ok"
-                       _name = msg.text.replace("Copy @","")
-                       _nametarget = _name.rstrip('  ')
-                       gs = cl.getGroup(msg.to)
-                       targets = []
-                       for g in gs.members:
-                           if _nametarget == g.displayName:
-                               targets.append(g.mid)
-                       if targets == []:
-                           cl.sendText(msg.to, "Tidak Ada Target Copy")
-                       else:
-                           for target in targets:
-                               try:
-                                   ki.cloneContactProfile(target)
-                                   kk.cloneContactProfile(target)
-                                   kc.cloneContactProfile(target)
-				   cl.cloneContactProfile(target)
-				   cl.sendText(msg.to,"Sudah tercopy")
+             elif "Copy @" in msg.text:
+                 if msg.toType == 2:
+                     if msg.from_ in admin:
+                         print "[COPY] Ok"
+                         _name = msg.text.replace("Copy @","")
+                         _nametarget = _name.rstrip('  ')
+                         gs = cl.getGroup(msg.to)
+                         targets = []
+                         for g in gs.members:
+                             if _nametarget == g.displayName:
+                                 targets.append(g.mid)
+                         if targets == []:
+                             cl.sendText(msg.to, "Tidak Ada Target Copy")
+                         else:
+                             for target in targets:
+                                 try:
+                                     ki.cloneContactProfile(target)
+                                     kk.cloneContactProfile(target)
+                                     kc.cloneContactProfile(target)
+				     cl.cloneContactProfile(target)
+				     cl.sendText(msg.to,"Sudah tercopy")
 #---------------------------------------------------------------------------------------------#				
 
 
 #---------------------------------------------------------------------------------------#
-            #elif "All:" in msg.text:
-                #string = msg.text.replace("All:","")
-		#if len(string.decode('utf-8')) <= 20:
-		    #profile = cl.getProfile()
-		    #profile.displayName = string
-		    #cl.updateProfile(profile)
-                #if len(string.decode('utf-8')) <= 20:
-                    #profile = ki.getProfile()
-                    #profile.displayName = string
-                    #ki.updateProfile(profile)
-                #if len(string.decode('utf-8')) <= 20:
-                    #profile = kk.getProfile()
-                    #profile.displayName = string
-                    #kk.updateProfile(profile)
-                #if len(string.decode('utf-8')) <= 20:
-                    #profile = kc.getProfile()
-                    #profile.displayName = string
-                    #kc.updateProfile(profile)
-		    #cl.sendText(msg.to,"nama berubah menjadi " + string + "")
+              elif "All:" in msg.text:
+                  string = msg.text.replace("All:","")
+		  if len(string.decode('utf-8')) <= 20:
+		      profile = cl.getProfile()
+		      profile.displayName = string
+		      cl.updateProfile(profile)
+                  if len(string.decode('utf-8')) <= 20:
+                      profile = ki.getProfile()
+                      profile.displayName = string
+                      ki.updateProfile(profile)
+                  if len(string.decode('utf-8')) <= 20:
+                      profile = kk.getProfile()
+                      profile.displayName = string
+                      kk.updateProfile(profile)
+                  if len(string.decode('utf-8')) <= 20:
+                      profile = kc.getProfile()
+                      profile.displayName = string
+                      kc.updateProfile(profile)
+	      	      cl.sendText(msg.to,"nama berubah menjadi " + string + "")
 			
 #----------------------------------------------------------------------------------------------#			
     #-------------Fungsi Leave Group Start-----------------------------------------------------#
