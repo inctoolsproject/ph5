@@ -2265,11 +2265,55 @@ def bot(op):
       #-------------Fungsi Balesan Respon Finish---------------------#
 
        #-------------Fungsi Speedbot Start---------------------#
-            elif msg.text in ["Speedbot","speedbot","Test","Sp"]:
+             elif msg.text in ["zzz","Bot Astro"]:
+                cl.sendText(msg.to, "Sebentar Astro...")
                 start = time.time()
-                cl.sendText(msg.to, "Sebentar ler...")
+                time.sleep(0.00009)
                 elapsed_time = time.time() - start
-                cl.sendText(msg.to, "%ss" % (elapsed_time))
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))    
+                print "[Command]Speed palsu executed"
+            elif "Speed Astro" in msg.text:
+                cl.sendText(msg.to, "Sebentar Astro...")
+                start = time.time()
+                time.sleep(0.0001)
+                elapsed_time = time.time() - start
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
+                print "[Command]Speed palsu executed"				
+            elif "Turunin" in msg.text:
+                cl.sendText(msg.to, "Kita turunin")
+                start = time.time()
+                time.sleep(0.02)
+                elapsed_time = time.time() - start
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
+                print "[Command]Speed palsu executed"
+            elif "Hancurin lagi" in msg.text:
+                cl.sendText(msg.to, "Kita turunin lagi")
+                start = time.time()
+                time.sleep(0.1)
+                elapsed_time = time.time() - start
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))   
+                print "[Command]Speed palsu executed"
+            elif "Turun lagi" in msg.text:
+                cl.sendText(msg.to, "Sebentar...")
+                start = time.time()
+                time.sleep(0.5)
+                elapsed_time = time.time() - start
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))  
+                print "[Command]Speed palsu executed"
+            elif ".speed" in msg.text:
+                time.sleep(0.5)
+                cl.sendText(msg.to, "Capek aku pantek!")
+                start = time.time()
+                time.sleep(2.32)
+                elapsed_time = time.time() - start
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))     	
+                print "[Command]Speed palsu executed"
+            elif msg.text in ["Sp asli","Bot Sp","Bot sp","Bot speed 1"]:
+                start = time.time()                   
+                cl.sendText(msg.to, "Sek")                    
+                elapsed_time = time.time() - start
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
+                print "[Command]Speed asli executed"
       #-------------Fungsi Speedbot Finish---------------------#
 
       #-------------Fungsi Banned Send Contact Start------------------#
