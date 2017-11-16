@@ -2068,7 +2068,7 @@ def bot(op):
 #---------------------------------------------------------------------------------------------#				
 
 
-#------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------#
             elif "All:" in msg.text:
                 string = msg.text.replace("All:","")
 		if len(string.decode('utf-8')) <= 20:
@@ -2088,7 +2088,9 @@ def bot(op):
                     profile.displayName = string
                     kc.updateProfile(profile)
 		    cl.sendText(msg.to,"nama berubah menjadi " + string + "")
-    #-------------Fungsi Leave Group Start---------------#
+			
+#----------------------------------------------------------------------------------------------#			
+    #-------------Fungsi Leave Group Start-----------------------------------------------------#
             elif msg.text in ["Rest Mikey"]:
               if msg.from_ in admin:
                 if msg.toType == 2:
