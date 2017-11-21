@@ -7,82 +7,25 @@ import time,random,sys,json,codecs,threading,glob,re
 import requests, urllib, json
 
 cl = LINETCR.LINE()
-cl.login(qr=True)
-cl.loginResult()
-
-ki = LINETCR.LINE()
-ki.login(qr=True)
-ki.loginResult()
+cl.login(token="EmZHqp7hjy5I4IystK33.b151yOadpUwvZ3Q/9r80aW.SiEMeDIMGorcgMQMH8JfCDN15dD5GW8fFN6kRK6874I=")
+cl.loginResult
 
 kk = LINETCR.LINE()
-kk.login(qr=True)
-kk.loginResult()
+kk.login(token="EmsQoGM5rmLAzwrO3gNd.UvZQ8iaX1kDhGbAShThZ3q.WazJjl8fQuK9N5oKJXRgC5p9xV7GFOYS0QEht0eKTSE=")
+kk.loginResult
 
-kc = LINETCR.LINE()
-kc.login(qr=True)
-kc.loginResult()
+ki = LINETCR.LINE()
+ki.login(token="EmJHJsDwCvQswOGh1jW8.bfmfUwtccO+1N7EuVwD+Ma.tCei5rmH1IadgptJM+9ELtHyXuMG6spGx/l4nv/GD88=")
+ki.loginResult
 
-kd = LINETCR.LINE()
-kd.login(qr=True)
-kd.loginResult()
+# client_id = 'cdd41f3c5f416wdd32721bfec232ae214'
+# client_secret = 'acc2df846e1b2cdb834358cd97f6ff04d56ac8b869bf273e7baf95a66e3d3361'
+# access_token = 'rrDkXHpBsBLBYVErluJUGEKA21hQ2u0AY5SAOZJ8fZUJFMM3pqN9DrK+F/4cJjCdWWu5apgMbffh00++GyVqjm4RjgP6t7AymYIJ7v/xoRnjd+U5C3fVwGBrqvVLie7At3Px7sWhuko7vxMoXoqn/VOdY8PpfGfrsvDFhI+5nHfDTofK697pgpyqnWXJQVKW'
+# refresh_token = ':6CdCzdQGJeut7M2XeAle'
 
-ke = LINETCR.LINE()
-ke.login(qr=True)
-ke.loginResult()
+# client = ImgurClient(client_id, client_secret, access_token, refresh_token)
 
-kf = LINETCR.LINE()
-kf.login(qr=True)
-kf.loginResult()
-
-kg = LINETCR.LINE()
-kg.login(qr=True)
-kg.loginResult()
-
-kh = LINETCR.LINE()
-kh.login(qr=True)
-kh.loginResult()
-
-kj = LINETCR.LINE()
-kj.login(qr=True)
-kj.loginResult()
-
-kl = LINETCR.LINE()
-kl.login(qr=True)
-kl.loginResult()
-
-km = LINETCR.LINE()
-km.login(qr=True)
-km.loginResult()
-
-kn = LINETCR.LINE()
-kn.login(qr=True)
-kn.loginResult()
-
-ko = LINETCR.LINE()
-ko.login(qr=True)
-ko.loginResult()
-
-kp = LINETCR.LINE()
-kp.login(qr=True)
-kp.loginResult()
-
-kq = LINETCR.LINE()
-kq.login(qr=True)
-kq.loginResult()
-
-kr = LINETCR.LINE()
-kr.login(qr=True)
-kr.loginResult()
-
-ks = LINETCR.LINE()
-ks.login(qr=True)
-ks.loginResult()
-
-kt = LINETCR.LINE()
-kt.login(qr=True)
-kt.loginResult()
-
-print "Astrobot"
+print "Login Suscess"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 helpMessage ="""
