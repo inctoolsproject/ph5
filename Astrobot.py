@@ -22,66 +22,6 @@ kc = LINETCR.LINE()
 kc.login(qr=True)
 kc.loginResult()
 
-kd = LINETCR.LINE()
-kd.login(qr=True)
-kd.loginResult()
-
-ke = LINETCR.LINE()
-ke.login(qr=True)
-ke.loginResult()
-
-kf = LINETCR.LINE()
-kf.login(qr=True)
-kf.loginResult()
-
-kg = LINETCR.LINE()
-kg.login(qr=True)
-kg.loginResult()
-
-kh = LINETCR.LINE()
-kh.login(qr=True)
-kh.loginResult()
-
-kj = LINETCR.LINE()
-kj.login(qr=True)
-kj.loginResult()
-
-kl = LINETCR.LINE()
-kl.login(qr=True)
-kl.loginResult()
-
-km = LINETCR.LINE()
-km.login(qr=True)
-km.loginResult()
-
-kn = LINETCR.LINE()
-kn.login(qr=True)
-kn.loginResult()
-
-ko = LINETCR.LINE()
-ko.login(qr=True)
-ko.loginResult()
-
-kp = LINETCR.LINE()
-kp.login(qr=True)
-kp.loginResult()
-
-kq = LINETCR.LINE()
-kq.login(qr=True)
-kq.loginResult()
-
-kr = LINETCR.LINE()
-kr.login(qr=True)
-kr.loginResult()
-
-ks = LINETCR.LINE()
-ks.login(qr=True)
-ks.loginResult()
-
-kt = LINETCR.LINE()
-kt.login(qr=True)
-kt.loginResult()
-
 print "Astrobot"
 reload(sys)
 sys.setdefaultencoding('utf-8')
